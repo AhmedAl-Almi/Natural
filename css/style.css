@@ -1,0 +1,515 @@
+@import url("https://fonts.google.com/");
+
+*,body,html{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background-color: #eee;
+    line-height: 30px;
+    
+}
+
+
+/*--------------------------------------------*/
+.menu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-top: 0;
+  z-index: 100;
+  box-shadow: 0px 6px 2px rgba(0,0,0,0.3);
+  background-color: #444;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+}
+.menu #logo{
+  float: left;
+  height: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  line-height: 30px;
+}
+
+.menu > ul{
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style-type: none;
+}
+
+.menu > ul > li{
+  float: left;
+}
+
+.menu-item{
+  display: inline-block;
+  padding: 15px 27px;
+  height: 60px;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-item:hover{
+  background-color: #ff0055;
+  
+}
+
+
+.sub-content{
+  position: absolute;
+  top: 60px;
+  overflow: hidden;
+  background-color: #333;
+  max-height: 0;
+}
+
+.sub-content a{
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.sub-drop{
+  padding: 0;
+    width: 102px;
+}
+
+.sub-drop ul{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sub-drop ul li a{
+  display: inline-block;
+  padding: 8px 18px;
+
+}
+
+.sub-drop ul li:hover{
+  background-color: #ff0055;
+  
+}
+
+/*--------------------controlling--------------------*/
+
+.menu-item:focus{
+  background-color: #ff0055;
+}
+.menu ul li:hover .sub-content{
+  max-height: 400px;
+  transition:max-height 0.3s ease-in;
+  -webkit-transition:max-height 0.3s ease-in;
+  -moz-transition:max-height 0.3s ease-in;
+}
+
+#rmenu{
+  float: right;
+}
+
+/*--------------------conect--------------------*/
+
+.conect{
+  background-color: #444;
+  width: 70px;
+  margin-left: 94%;
+  margin-top: 50px;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 100;
+}
+
+.conect ul{
+
+}
+.conect ul li{
+  list-style-type: none;
+   padding: 10px 0px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.conect ul li:hover{
+  opacity: 1;
+}
+/*--------------------content--------------------*/
+
+.sometext{
+text-align: center;
+margin-top: 150px;
+margin-bottom: 80px;
+font-size: 2em;
+}
+
+.sometext span{
+  font-weight: thick;
+}
+
+.myimg {
+  text-align: center;
+  padding-top: 30px;
+  
+}
+
+.myimg img{
+  width: 74%;
+  height: 80%;
+  border: 1px solid #999;
+  box-shadow: 5px #333;
+
+}
+/*--------------------style sub--------------------*/
+
+
+/*--------------------text--------------------*/
+
+.text1 {
+  width: 60%;
+  margin: 10px 20%;
+}
+
+.text1 h2{
+  text-align: center;
+padding: 40px;
+}
+
+.text1 p{
+  text-align: center;
+  font-size: 1.1em;
+  text-align: justify;
+    margin-bottom: 150px;
+}
+.red{
+    color: red;
+}
+
+.under-text {
+width: 70%;
+margin: 40px 15%;
+}
+
+.under-text p{
+  text-align: center;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+/*
+body header ul li a .btn{
+   
+   background: linear-gradient(45deg, rgba(255,184,115,0.65) 0%,rgba(255,124,189,0.65) 50%,rgba(108,0,153,0.65) 100%);
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(34,62,66,.25);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+}*/
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*-----------------img-content-----------------*/
+
+.img-content{
+  width: 86%;
+  height: 340px;
+  border: 1px dotted #392121;
+  margin: 70px 7%;
+  background-color: #999099;
+}
+
+.img-content h3{
+  padding: 5px 20px;
+  color: aliceblue;
+  border-bottom: 2px solid white;
+  border-left: 8px solid white;
+  width: 170px;
+    
+    padding-right: 0px;
+}
+
+.img-content p{
+  text-align: justify;
+  width: 65%;
+  float: left;
+  overflow: hidden;
+  padding: 30px 40px;
+color: white;
+}
+
+.img-content img{
+  float: right;
+  width: 30%;
+  overflow: hidden;
+  border: 5px solid #659954;
+  margin-right: 20px;
+    border-radius: 7px;
+}
+
+.img-content a{
+  float: left;
+  margin-left: 55%;
+  overflow: hidden;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px dotted azure;
+  padding: 5px;
+  color:azure;
+}
+
+footer{
+    position: relative;
+  border-top: 2px solid blue;
+  background-color: #444444;
+  height: 250px;
+  border-bottom: 2px solid blue;
+}
+
+footer .foo1
+{
+  width: 150px;
+  float: left;
+  margin:20px 11%;
+  border-left: 1px solid white;
+}
+
+footer .foo1 ul li{
+list-style-type: none;
+text-align: center;
+padding-top: 5px;
+}
+
+footer .foo1 ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+footer .foo1 h3{
+  border-bottom: 1px dotted white;
+  text-align: center;
+    color: white;
+}
+
+.copy-right{
+  padding-top: 30px;
+  width: 100%;
+    float: left;
+    border-top: 2px solid white;
+}
+
+.copy-right p{
+  text-align: center;
+    color: white;
+}
+
+/*--------------------div links--------------------*/
+
+.links{
+  width: 80%;
+  height: 100px;
+  margin-left: 10%;
+  margin-bottom: 60px;
+}
+
+.links ul{
+  float: left;
+  list-style-type: none;
+  
+}
+
+.links ul li{
+  float: left;
+  margin: 35px 50px 30px 105px;
+    
+}
+
+.links ul li a{
+  text-decoration: none;
+  border: 1px solid #454545;
+  padding: 10px 60px;
+  border-radius: 3px;
+  background-color: #555;
+  font-size: 1.2em;
+  color: white;
+}
+
+.links ul li a:hover{
+  background-color: #999;
+  color: blue;
+  border-radius: 8px;
+  
+}
+
+
+/* --------------------------@media------------------------------ */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+
+  .menu{
+    height: 70px;
+  }
+  .menu #logo{
+    font-size: 0.5em;
+  }
+  .menu ul li a{
+    font-size: 0.6em;
+    padding:6px 15px; 
+    height: 40px;
+  }
+  .sub-drop ul li a{
+  display: inline-block;
+  padding: 5px 12px;
+}
+
+.menu #logo{
+  float: left;
+  height: 30px;
+  padding: 5px 105px;
+  border-bottom: 1px dotted #999; 
+}
+
+.myimg img{
+  width: 74%;
+  height: 30%;
+  border: 1px solid #999;
+  box-shadow: 5px #333;
+}
+
+.text1 h2{
+  font-size: 0.5em;
+
+}
+
+.text1 p{
+  text-align: center;
+  font-size: 0.5em;
+  text-align: justify;
+}
+
+
+.under-text p{
+  text-align: center;
+  font-size: 0.5em;
+  text-align: justify;
+    margin: 10px 10px;
+    
+    
+}
+
+.sometext{
+text-align: center;
+padding-top: 55px;
+font-size: 1em;
+    
+}
+
+.sub-drop ul li a{
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.img-content p{
+  font-size: 0.5em;
+
+}
+
+   
